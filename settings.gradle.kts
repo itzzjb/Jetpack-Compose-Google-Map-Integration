@@ -14,4 +14,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Meredio"
-include(":GameList")
+include(":buyer")

@@ -2,16 +2,16 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="GameList">
+      <entry key="GameListPreview">
         <State />
       </entry>
       <entry key="GameRowPreview">
         <State />
       </entry>
-      <entry key="GameRowPreview (1)">
+      <entry key="IntroPagePreview">
         <State />
       </entry>
-      <entry key="seller">
+      <entry key="buyer">
         <State />
       </entry>
     </value>
