@@ -1,4 +1,4 @@
-package io.januda.buyer
+package io.januda.gamelist
 
 import android.content.res.Configuration
 import android.os.Bundle

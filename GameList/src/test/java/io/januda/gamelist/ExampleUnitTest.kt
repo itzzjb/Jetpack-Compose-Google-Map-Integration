@@ -1,4 +1,4 @@
-package io.januda.buyer
+package io.januda.gamelist
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package io.januda.buyer
+package io.januda.gamelist
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

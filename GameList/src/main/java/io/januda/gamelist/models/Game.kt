@@ -1,4 +1,4 @@
-package io.januda.buyer.models
+package io.januda.gamelist.models
 
 // This is not a UI class
 // This is like a data type for Game ( Object of this class represents a game )

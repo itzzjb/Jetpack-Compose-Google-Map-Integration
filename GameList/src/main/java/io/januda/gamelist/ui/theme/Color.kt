@@ -1,4 +1,4 @@
-package io.januda.buyer.ui.theme
+package io.januda.gamelist.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
