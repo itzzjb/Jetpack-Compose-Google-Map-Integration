@@ -1,5 +1,6 @@
 package io.januda.buyer.ui.components
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -17,25 +18,28 @@ fun GameList(vm: GamesViewModel) {
     // We need to somehow make a network request by calling to that method.
     // So for that let's create a button.
 
-    Button(onClick = { vm.getGames() }) {
-        Text(text = "Get Game")
+    Column {
+        Button(onClick = { vm.getGames() }) {
+            Text(text = "Get Game")
+        }
+
+        // LazyColumn is a Composable in Jetpack Compose.
+        LazyColumn(modifier = Modifier.fillMaxWidth()) {
+            // If you only have one item to show
+            /*
+            item  {
+                Text(text = "Januda")
+            }
+            */
+
+            // items(games) -> Says to iterate over items in games: List<Game>
+            items (vm.games) {
+                // For each item of games: List<Game> called game Call GameRow composable.
+                    game -> GameRow(game = game)
+            }
+        }
     }
 
-    // LazyColumn is a Composable in Jetpack Compose.
-    LazyColumn(modifier = Modifier.fillMaxWidth()) {
-        // If you only have one item to show
-        /*
-        item  {
-            Text(text = "Januda")
-        }
-        */
-
-        // items(games) -> Says to iterate over items in games: List<Game>
-        items (vm.games) {
-            // For each item of games: List<Game> called game Call GameRow composable.
-            game -> GameRow(game = game)
-        }
-    }
 }
 
 /*
