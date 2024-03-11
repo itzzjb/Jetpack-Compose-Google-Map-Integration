@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
@@ -16,8 +15,6 @@ import com.bumptech.glide.integration.compose.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import io.januda.buyer.R
 import io.januda.buyer.models.Game
-import io.januda.buyer.models.valorant
-import io.januda.buyer.ui.theme.MeredioTheme
 
 // Small parts of the ui like One single row of the Game list are added
 
@@ -41,8 +38,8 @@ fun GameRow(game: Game) {
         // Glide -> An image loading and caching library for Android focused on smooth scrolling
 
         GlideImage(
-            model = game.imageUrl,
-            contentDescription = game.name,
+            model = game.thumbnail,
+            contentDescription = game.title,
             // This is a default image got from the drawables which will only be output when loading the screen from the internet.
             // You need a placeHolder Composable here.
             loading = placeholder(R.drawable.ic_launcher_background),
@@ -53,13 +50,14 @@ fun GameRow(game: Game) {
         )
         Column(modifier = Modifier.padding(8.dp)) {
             // Getting the name and  description to the UI as text composable.
-            Text(text = game.name)
+            Text(text = game.title)
             // We don't need a Modifier here to do customizations
-            Text(text = game.description, fontSize= 12.sp, lineHeight = 15.sp)
+            Text(text = game.developer, fontSize= 12.sp, lineHeight = 15.sp)
         }
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun GameRowPreview() {
@@ -78,6 +76,7 @@ fun GameRowPreview() {
         GameRow(game = valorant)
     }
 }
+*/
 
 // Note -
 

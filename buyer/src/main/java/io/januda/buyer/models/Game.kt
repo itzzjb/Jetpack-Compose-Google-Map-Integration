@@ -5,11 +5,35 @@ package io.januda.buyer.models
 // This is a model to use in the GameList
 // When we use data classes we can create models without constructors.
 data class Game(
-    val name: String,
-    val description: String,
-    val imageUrl: String
+    // We need to change the names of the variables according to the HTTP body we are receiving.
+    val id: Number,
+    val title: String,
+    val thumbnail: String,
+    val developer: String
 )
 
+/*
+
+This is one data set we received from the API in JSON format.
+
+{
+"id":540,
+"title":"Overwatch 2",
+"thumbnail":"https:\/\/www.freetogame.com\/g\/540\/thumbnail.jpg",
+"short_description":"A hero-focused first-person team shooter from Blizzard Entertainment.",
+"game_url":"https:\/\/www.freetogame.com\/open\/overwatch-2",
+"genre":"Shooter",
+"platform":"PC (Windows)",
+"publisher":"Activision Blizzard",
+"developer":"Blizzard Entertainment",
+"release_date":"2022-10-04",
+"freetogame_profile_url":"https:\/\/www.freetogame.com\/overwatch-2"
+}
+
+*/
+
+
+/*
 // Creating some dummy games for use.
 val mirage = Game(
     "Assassin's Creed Mirage",
@@ -32,3 +56,4 @@ val lol =  Game (
 // Creating a dummy game list from above created dummy games.
 // You need listOf function here to create a list
 val games = listOf<Game>(mirage, valorant,lol,mirage, valorant,lol,mirage, valorant,lol,mirage, valorant,lol,mirage, valorant,lol)
+ */

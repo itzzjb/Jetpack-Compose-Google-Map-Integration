@@ -55,8 +55,18 @@ dependencies {
     // Glide -> An image loading and caching library for Android focused on smooth scrolling
     implementation("com.github.bumptech.glide:compose:1.0.0-beta01")
 
+    // Added Retrofit as a 3rd party library inorder to add HTTP functionality to the project
+    // This returns data in JSON ( Java Script Object Notation)
+    // Retrofit -> A type-safe HTTP client for Android and the JVM
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+    // We need to convert the JSON data into Kotlin data objects
+    // We can use Gson convertor here.
+    implementation("com.squareup.retrofit2:converter-gson:2.0.0")
+
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
     implementation("androidx.activity:activity-compose:1.8.1")
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     implementation("androidx.compose.ui:ui")
