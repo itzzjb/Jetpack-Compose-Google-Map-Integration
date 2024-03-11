@@ -1,7 +1,5 @@
 package io.januda.buyer.ui.components
 
-import android.graphics.drawable.Icon
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
@@ -10,16 +8,15 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
-import com.bumptech.glide.integration.compose.Placeholder
 import com.bumptech.glide.integration.compose.placeholder
 import io.januda.buyer.R
 import io.januda.buyer.models.Game
+import io.januda.buyer.models.valorant
 import io.januda.buyer.ui.theme.MeredioTheme
 
 // Small parts of the ui like One single row of the Game list are added
@@ -68,12 +65,17 @@ fun GameRow(game: Game) {
 fun GameRowPreview() {
     MeredioTheme {
         // We need to create a Game object and pass it on to the preview.
+        /*
         val game = Game(
             "Assassin's Creed Mirage",
             "Assassin's Creed Mirage is a 2023 action-adventure game developed by Ubisoft Bordeaux and published by Ubisoft.",
             "https://upload.wikimedia.org/wikipedia/en/2/23/Assassin%27s_Creed_Mirage_cover.jpeg"
         )
-        GameRow(game = game)
+         GameRow(game = game)
+        */
+
+        // You can now directly get the dummy objects created in models
+        GameRow(game = valorant)
     }
 }
 

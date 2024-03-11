@@ -5,7 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import io.januda.buyer.models.Game
+import io.januda.buyer.models.games
+import io.januda.buyer.models.valorant
 import io.januda.buyer.ui.components.GameRow
 import io.januda.buyer.ui.theme.MeredioTheme
 
@@ -15,12 +16,16 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MeredioTheme (darkTheme = true) {
+                /*
                 val game = Game(
                     "Assassin's Creed Mirage",
                     "Assassin's Creed Mirage is a 2023 action-adventure game developed by Ubisoft Bordeaux and published by Ubisoft.",
                     "https://upload.wikimedia.org/wikipedia/en/2/23/Assassin%27s_Creed_Mirage_cover.jpeg"
                 )
                 GameRow(game = game)
+                */
+                // You can now directly get the dummy objects created in models
+                GameList(games = games)
             }
         }
     }
@@ -33,12 +38,16 @@ class MainActivity : ComponentActivity() {
 fun IntroPagePreview() {
     // We are calling the GameRow() Composable here.
     MeredioTheme (darkTheme = true) {
+        /*
         val game = Game(
             "Assassin's Creed Mirage",
             "Assassin's Creed Mirage is a 2023 action-adventure game developed by Ubisoft Bordeaux and published by Ubisoft.",
             "https://upload.wikimedia.org/wikipedia/en/2/23/Assassin%27s_Creed_Mirage_cover.jpeg"
         )
         GameRow(game = game)
+         */
+        // You can now directly get the dummy objects created in models
+        GameRow(game = valorant)
     }
 }
 
