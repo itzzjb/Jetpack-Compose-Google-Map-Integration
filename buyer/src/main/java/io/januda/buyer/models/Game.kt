@@ -4,6 +4,7 @@ package io.januda.buyer.models
 // This is like a data type for Game ( Object of this class represents a game )
 // This is a model to use in the GameList
 // When we use data classes we can create models without constructors.
+// data classes are written inside () not {}
 data class Game(
     // We need to change the names of the variables according to the HTTP body we are receiving.
     val id: Number,

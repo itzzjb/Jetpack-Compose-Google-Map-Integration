@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    // This is the plugin for adding ksp
+    id("com.google.devtools.ksp") version "1.8.21-1.0.11"
 }
 
 android {
@@ -63,6 +65,19 @@ dependencies {
     // We need to convert the JSON data into Kotlin data objects
     // We can use Gson convertor here.
     implementation("com.squareup.retrofit2:converter-gson:2.0.0")
+
+    // These are the dependencies for implementing ROOM - ORM
+    // In OOP we have classes, object, fields
+    // In Databases we have tables, rows, columns
+    // We need to make the connection between these too
+    // For bridging this and to make it easy ( We mostly don't need SQL knowledge to communicate with the DB) we use ORM tools.
+    // The most popular ORM tool for android in ROOM ( For Java and Spring-boot -> Hibernate )
+    implementation("androidx.room:room-runtime:2.6.1")
+    // Kotlin symbol processing
+    // This is gonna help us in annotation processing
+    // Inorder to work with ksp we need to add that as a plugin in the plugins section
+    ksp("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
