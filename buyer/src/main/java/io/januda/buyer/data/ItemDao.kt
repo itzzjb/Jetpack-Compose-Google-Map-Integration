@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.Flow
 // DAO - Data Access Object
 // This is similar to Repository in Spring-boot
 // We need dao inorder to access and interact (CRUD operations) with a database.
+// This is like the executor of our application
 
 // This should not be a class. It should be an interface.
 // We need to annotate this with @Dao
@@ -51,6 +52,7 @@ interface ItemDao {
 
     // When you need to use custom queries
     // :id -> given Id ( id that comes as a parameter for the getItem method )
+    // Called "binding"
     @Query("SELECT * FROM items WHERE id = :id")
     // Wrapped with FLOW
     fun getItem(id: Int): Flow<Item>

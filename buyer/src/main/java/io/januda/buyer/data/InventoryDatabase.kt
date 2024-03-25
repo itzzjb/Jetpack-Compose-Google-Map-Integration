@@ -16,7 +16,7 @@ import androidx.room.RoomDatabase
 // And there might be migrations of the databases in the future. So we need to give the version.
 @Database(entities = [Item::class], version = 1, exportSchema = false)
 abstract class InventoryDatabase : RoomDatabase() {
-
+ 
     // Now we need to include all our DAO s
     // We will have a function called itemDao() that will be use to access ItemDao
     abstract fun itemDao(): ItemDao

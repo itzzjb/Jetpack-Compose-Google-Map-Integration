@@ -5,13 +5,16 @@
       <entry key="GameListPreview">
         <State />
       </entry>
-      <entry key="GameListPreview (1)">
-        <State />
-      </entry>
       <entry key="GameRowPreview">
         <State />
       </entry>
       <entry key="IntroPagePreview">
+        <State />
+      </entry>
+      <entry key="ItemEntryScreenPreview">
+        <State />
+      </entry>
+      <entry key="MainActivity">
         <State />
       </entry>
       <entry key="buyer">
