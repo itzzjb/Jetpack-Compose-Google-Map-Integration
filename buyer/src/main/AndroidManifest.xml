@@ -17,10 +17,13 @@
             android:theme="@style/Theme.Meredio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--
+        We normally put meta tags in the bottom
+        We need to add the API key we got from Google Cloud Projects
+        -->
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyA8zsfPV84I4QHn9-7r3qMpZoIzLjyd10o"/>
     </application>
-
 </manifest>
