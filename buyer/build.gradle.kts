@@ -56,6 +56,10 @@ android {
 
 dependencies {
 
+    // Google Maps Integration
+    implementation ("com.google.maps.android:maps-compose:4.3.3")
+
+
     // Added glide library into the project as a 3rd party library
     // Glide -> An image loading and caching library for Android focused on smooth scrolling
     implementation("com.github.bumptech.glide:compose:1.0.0-beta01")
