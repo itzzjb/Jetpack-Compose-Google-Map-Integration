@@ -94,4 +94,4 @@ fun GoogleMapView() {
         )
     }
 }
-// We need to add the API key to the AndroidManifest.xml
+// We need to add the API key to the AndroidManifest.xml file
